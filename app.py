@@ -11,10 +11,10 @@ def recommend(movie):
     distances = similarity[movie_index]
     movie_list = sorted(list(enumerate(distances)), reverse=True, key=lambda x: x[1])[1:6]
     l=[]
-  #  poster=[]
+  
     for i in movie_list:
         l.append(movies.iloc[i[0]].title)
-        #poster.append(fetch_poster(movie_id))
+       
     return l
 
 
